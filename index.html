@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAYE NIASS, LE FRACASSANT - Politique de Confidentialité</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .book-icon {
+            font-size: 4rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .update-date {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            border: 2px solid #FFD700;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 20px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #4a6491;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            color: #FFD700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            border-left: 4px solid #FFD700;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #4a6491 0%, #2c3e50 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #2c3e50;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: #FFD700;
+            color: #2c3e50;
+        }
+
+        .email-link i {
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFD700;
+            color: #2c3e50;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .back-button:hover {
+            background: transparent;
+            color: #FFD700;
+            border-color: #FFD700;
+            transform: translateX(-5px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .book-icon {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .email-link {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation pour l'apparition des sections */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="book-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <h1>BAYE NIASS, LE FRACASSANT</h1>
+            <div class="subtitle">Politique de Confidentialité</div>
+            <div class="update-date">
+                <i class="fas fa-calendar-alt"></i> Dernière mise à jour : 1er décembre 2025
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2><i class="fas fa-info-circle"></i> Collecte des Informations</h2>
+                <p>Nous collectons uniquement les informations nécessaires au fonctionnement de l'application <strong>"BAYE NIASS, LE FRACASSANT"</strong>. Aucune donnée personnelle n'est stockée sur nos serveurs.</p>
+                <div class="highlight">
+                    <p><i class="fas fa-shield-alt"></i> Votre vie privée est notre priorité. Nous ne collectons ni ne partageons aucune information personnelle identifiable.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-database"></i> Utilisation des Données</h2>
+                <p>Les données de lecture (progression dans le livre, dernières pages consultées) sont stockées localement sur votre appareil. Ces informations ne quittent jamais votre appareil et sont uniquement utilisées pour améliorer votre expérience de lecture.</p>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-cookie-bite"></i> Cookies</h2>
+                <p>Cette application n'utilise pas de cookies de suivi. Seuls les cookies techniques essentiels au fonctionnement peuvent être utilisés pour mémoriser vos préférences (comme le thème sombre/clair).</p>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-user-shield"></i> Vos Droits</h2>
+                <p>Vous avez le droit d'accéder à vos données, de les rectifier ou de les supprimer. Pour exercer ces droits, contactez-nous à l'adresse email ci-dessous.</p>
+                <div class="highlight">
+                    <p><i class="fas fa-lightbulb"></i> Conformément au RGPD et aux lois sur la protection des données, nous nous engageons à respecter vos droits numériques.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-mobile-alt"></i> Données de l'Application</h2>
+                <p>L'application fonctionne entièrement sur votre appareil. Toutes les données (marque-pages, progression) restent stockées localement et peuvent être effacées en désinstallant l'application.</p>
+            </div>
+
+            <div class="contact-info">
+                <h2><i class="fas fa-envelope"></i> Contact</h2>
+                 
+                <a href="mailto:ahmedkhalifaniasse00@gmail.com" class="email-link">
+                    <i class="fas fa-paper-plane"></i> ahmedkhalifaniasse00@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="logo">BAYE NIASS</div>
+            <p>Application de lecture © 2025 - Tous droits réservés</p>
+            <p style="opacity: 0.8; margin-top: 10px; font-size: 0.9rem;">
+                <i class="fas fa-lock"></i> Votre confidentialité est protégée
+            </p>
+         
+        </div>
+    </div>
+
+    <script>
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Effet de parallaxe sur le header
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('.header');
+                if (header) {
+                    header.style.transform = `translateY(${scrolled * 0.1}px)`;
+                }
+            });
+
+            // Confirmation d'envoi d'email
+            const emailLink = document.querySelector('.email-link');
+            if (emailLink) {
+                emailLink.addEventListener('click', function(e) {
+                    if (!confirm('Vous allez ouvrir votre application de messagerie. Souhaitez-vous continuer ?')) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
