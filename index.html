@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Politique de Confidentialité</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, minimum-scale=1.0">
+    <title>Politique de Confidentialité - Baye Niass, le fracassant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -13,371 +13,470 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f5f0;
+            color: #2c3e50;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            padding: 20px;
         }
 
-        .container {
-            max-width: 1000px;
+        /* Mode sombre optionnel */
+        body.dark-mode {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        /* Conteneur principal */
+        .privacy-container {
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            padding: 40px 24px 80px;
         }
 
-        .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
-            color: white;
-            padding: 50px 40px;
+        /* En-tête */
+        .privacy-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #d4af37;
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: cover;
-        }
-
-        .book-icon {
-            font-size: 4rem;
-            color: #FFD700;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .app-icon {
+            font-size: 64px;
+            color: #d4af37;
+            margin-bottom: 16px;
         }
 
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            font-weight: 700;
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .subtitle {
-            font-size: 1.4rem;
-            opacity: 0.9;
-            font-weight: 300;
-            letter-spacing: 1px;
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-top: 8px;
         }
 
-        .update-date {
-            display: inline-block;
-            background: rgba(255, 215, 0, 0.2);
-            border: 2px solid #FFD700;
-            padding: 8px 20px;
-            border-radius: 30px;
-            margin-top: 20px;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
+        body.dark-mode .subtitle {
+            color: #aaa;
         }
 
-        .content {
-            padding: 50px 40px;
+        .last-updated {
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-top: 16px;
         }
 
-        .section {
-            margin-bottom: 40px;
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            border-left: 5px solid #4a6491;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Sections */
+        .privacy-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        body.dark-mode .privacy-section {
+            background: #16213e;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
-        h2 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+        .privacy-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .privacy-section h2 {
+            color: #d4af37;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            border-left: 4px solid #d4af37;
+            padding-left: 16px;
         }
 
-        h2 i {
-            color: #FFD700;
+        .privacy-section h2 i {
+            font-size: 1.4rem;
         }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #555;
+        .privacy-section p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            text-align: justify;
         }
 
-        .highlight {
-            background: linear-gradient(120deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-            border-left: 4px solid #FFD700;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
+        .privacy-section ul, .privacy-section ol {
+            margin: 16px 0 16px 32px;
         }
 
-        .contact-info {
-            background: linear-gradient(135deg, #4a6491 0%, #2c3e50 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .contact-info h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .email-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            color: #2c3e50;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .email-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            background: #FFD700;
-            color: #2c3e50;
-        }
-
-        .email-link i {
-            font-size: 1.2rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 30px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 40px;
-            border-radius: 0 0 20px 20px;
-        }
-
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #FFD700;
-            color: #2c3e50;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .back-button:hover {
-            background: transparent;
-            color: #FFD700;
-            border-color: #FFD700;
-            transform: translateX(-5px);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #FFD700;
-            letter-spacing: 2px;
+        .privacy-section li {
             margin-bottom: 10px;
         }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            .header {
-                padding: 40px 20px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .content {
-                padding: 30px 20px;
-            }
-            
-            .section {
-                padding: 20px;
-            }
-            
-            .book-icon {
-                font-size: 3rem;
-            }
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
         }
 
-        @media (max-width: 480px) {
+        .badge {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        body.dark-mode .badge {
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .highlight {
+            background: #fff3e0;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #d4af37;
+            margin: 20px 0;
+        }
+
+        body.dark-mode .highlight {
+            background: #1e2a47;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        body.dark-mode .contact-info {
+            background: #0f3460;
+        }
+
+        .contact-info i {
+            color: #d4af37;
+            margin-right: 8px;
+        }
+
+        .contact-info a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pied de page */
+        .privacy-footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #ddd;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+        }
+
+        body.dark-mode .privacy-footer {
+            border-top-color: #2c3e50;
+        }
+
+        /* Bouton retour et thème */
+        .action-bar {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        .action-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #d4af37;
+            color: #1a1a2e;
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .action-btn:hover {
+            transform: scale(1.1);
+            background: #c5a016;
+        }
+
+        body.dark-mode .action-btn {
+            background: #f1c40f;
+            color: #1a1a2e;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-container {
+                padding: 24px 16px 60px;
+            }
+            .privacy-section {
+                padding: 20px;
+            }
             h1 {
                 font-size: 1.8rem;
             }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .email-link {
-                padding: 12px 20px;
-                font-size: 1rem;
+            .privacy-section h2 {
+                font-size: 1.4rem;
             }
         }
 
-        /* Animation pour l'apparition des sections */
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
+        /* Animation douce */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
         }
 
-        .section:nth-child(1) { animation-delay: 0.1s; }
-        .section:nth-child(2) { animation-delay: 0.2s; }
-        .section:nth-child(3) { animation-delay: 0.3s; }
-        .section:nth-child(4) { animation-delay: 0.4s; }
-        .section:nth-child(5) { animation-delay: 0.5s; }
-        .section:nth-child(6) { animation-delay: 0.6s; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Scroll personnalisé */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="book-icon">
-                <i class="fas fa-book"></i>
+    <div class="privacy-container fade-in">
+        <!-- En-tête -->
+        <div class="privacy-header">
+            <div class="app-icon">
+                <i class="fas fa-book-open"></i>
             </div>
-            <h1> </h1>
-            <div class="subtitle">Politique de Confidentialité</div>
-            <div class="update-date">
-                <i class="fas fa-calendar-alt"></i> Dernière mise à jour : 1er décembre 2025
+            <h1>Politique de Confidentialité</h1>
+            <div class="subtitle">Baye Niass, le fracassant</div>
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i> Dernière mise à jour : 18 Avril 2026
             </div>
         </div>
 
-        <div class="content">
-            <div class="section">
-                <h2><i class="fas fa-info-circle"></i> Collecte des Informations</h2>
-                <p>Nous collectons uniquement les informations nécessaires au fonctionnement de l'application <strong> </strong>. Aucune donnée personnelle n'est stockée sur nos serveurs.</p>
-                <div class="highlight">
-                    <p><i class="fas fa-shield-alt"></i> Votre vie privée est notre priorité. Nous ne collectons ni ne partageons aucune information personnelle identifiable.</p>
-                </div>
+        <!-- Section 1 : Introduction -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-info-circle"></i> Introduction</h2>
+            <p>Bienvenue dans l'application <strong>« Baye Niass, le fracassant »</strong>. Cette politique de confidentialité a pour but de vous informer de manière transparente sur la manière dont nous traitons vos données personnelles lorsque vous utilisez notre application.</p>
+            <p>Nous accordons une importance capitale à la protection de votre vie privée. Conformément au Règlement Général sur la Protection des Données (RGPD), nous nous engageons à respecter la confidentialité de vos informations.</p>
+            <div class="highlight">
+                <i class="fas fa-shield-alt"></i> <strong>Notre engagement :</strong> Aucune donnée personnelle n'est collectée, stockée ou partagée via nos serveurs. Toutes les informations restent sur votre appareil.
             </div>
+        </div>
 
-            <div class="section">
-                <h2><i class="fas fa-database"></i> Utilisation des Données</h2>
-                <p>Les données de lecture (progression dans le livre, dernières pages consultées) sont stockées localement sur votre appareil. Ces informations ne quittent jamais votre appareil et sont uniquement utilisées pour améliorer votre expérience de lecture.</p>
+        <!-- Section 2 : Collecte des informations -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-database"></i> Collecte des informations</h2>
+            <p><strong>Nous ne collectons AUCUNE donnée personnelle vous concernant.</strong> L'application fonctionne entièrement en local sur votre appareil Android.</p>
+            <p>Cependant, certaines informations techniques peuvent être utilisées de manière strictement anonyme pour le bon fonctionnement de l'application :</p>
+            <ul>
+                <li><i class="fas fa-chart-line"></i> <strong>Données de progression de lecture</strong> : stockées localement pour mémoriser votre dernière page lue. Ces données ne sont jamais transmises à des serveurs externes.</li>
+                <li><i class="fas fa-palette"></i> <strong>Préférences d'affichage</strong> : votre choix de thème (clair/sombre) est sauvegardé uniquement sur votre appareil.</li>
+                <li><i class="fas fa-mobile-alt"></i> <strong>Informations techniques anonymes</strong> : Aucune information comme l'adresse IP, modèle d'appareil ou identifiant publicitaire n'est collectée.</li>
+            </ul>
+            <div class="badge-list">
+                <span class="badge"><i class="fas fa-check-circle"></i> Aucun compte requis</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Aucune inscription</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Aucune donnée partagée</span>
             </div>
+        </div>
 
-            <div class="section">
-                <h2><i class="fas fa-cookie-bite"></i> Cookies</h2>
-                <p>Cette application n'utilise pas de cookies de suivi. Seuls les cookies techniques essentiels au fonctionnement peuvent être utilisés pour mémoriser vos préférences (comme le thème sombre/clair).</p>
+        <!-- Section 3 : Utilisation des données -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-chart-pie"></i> Utilisation des données</h2>
+            <p>Les seules données stockées sont utilisées exclusivement pour :</p>
+            <ol>
+                <li><strong>Mémoriser votre progression de lecture</strong> : afin de vous permettre de reprendre la lecture là où vous vous êtes arrêté.</li>
+                <li><strong>Sauvegarder vos préférences visuelles</strong> (thème clair/sombre) pour une expérience personnalisée.</li>
+            </ol>
+            <p>Aucune exploitation commerciale, analyse comportementale ou recoupement avec des données externes n'est effectuée. Vous gardez le contrôle total sur ces informations.</p>
+            <p><i class="fas fa-trash-alt"></i> <strong>Suppression des données :</strong> Vous pouvez effacer toutes les données stockées par l'application à tout moment via les paramètres de votre appareil (Paramètres → Applications → Baye Niass → Stockage → Effacer les données).</p>
+        </div>
+
+        <!-- Section 4 : Partage des données -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-share-alt"></i> Partage des données</h2>
+            <p><strong>Nous ne partageons aucune donnée avec des tiers.</strong> Étant donné que nous ne collectons aucune information personnelle, il n'y a rien à partager.</p>
+            <p>L'application n'intègre aucun SDK de suivi publicitaire, aucun outil d'analyse externe (Google Analytics, etc.), ni aucun réseau social. Toutes les ressources (images, textes) sont intégrées et chargées depuis des CDN sécurisés sans collecte de données.</p>
+            <div class="highlight">
+                <i class="fas fa-ban"></i> <strong>Aucune publicité ciblée</strong> – L'application ne contient pas de publicités de tiers.
             </div>
+        </div>
 
-            <div class="section">
-                <h2><i class="fas fa-user-shield"></i> Vos Droits</h2>
-                <p>Vous avez le droit d'accéder à vos données, de les rectifier ou de les supprimer. Pour exercer ces droits, contactez-nous à l'adresse email ci-dessous.</p>
-                <div class="highlight">
-                    <p><i class="fas fa-lightbulb"></i> Conformément au RGPD et aux lois sur la protection des données, nous nous engageons à respecter vos droits numériques.</p>
-                </div>
-            </div>
+        <!-- Section 5 : Sécurité -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-lock"></i> Sécurité des données</h2>
+            <p>Bien que nous ne collections aucune donnée, nous mettons en œuvre des mesures de sécurité robustes pour protéger l'intégrité de l'application et empêcher toute intrusion :</p>
+            <ul>
+                <li>Les données locales sont stockées dans l'environnement sécurisé du stockage local d'Android.</li>
+                <li>L'application ne demande aucune permission sensible (localisation, contacts, fichiers média, etc.).</li>
+                <li>Les communications externes sont limitées au chargement des images depuis un serveur sécurisé (HTTPS).</li>
+            </ul>
+        </div>
 
-            <div class="section">
-                <h2><i class="fas fa-mobile-alt"></i> Données de l'Application</h2>
-                <p>L'application fonctionne entièrement sur votre appareil. Toutes les données (marque-pages, progression) restent stockées localement et peuvent être effacées en désinstallant l'application.</p>
-            </div>
+        <!-- Section 6 : Droits des utilisateurs -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-user-check"></i> Vos droits</h2>
+            <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+            <ul>
+                <li><strong>Droit d'accès</strong> : vous pouvez demander à connaître toutes les données que nous détenons sur vous. (Aucune donnée n'est détenue).</li>
+                <li><strong>Droit de rectification</strong> : vous pouvez corriger toute information inexacte.</li>
+                <li><strong>Droit à l'effacement</strong> : vous pouvez supprimer toutes les données locales via les paramètres de l'application ou de votre appareil.</li>
+                <li><strong>Droit à la limitation du traitement</strong> : vous pouvez restreindre l'utilisation de vos données (sans objet ici).</li>
+                <li><strong>Droit à la portabilité</strong> : vous pouvez récupérer vos données dans un format structuré.</li>
+            </ul>
+            <p>Pour exercer ces droits, veuillez nous contacter à l'adresse mentionnée ci-dessous. Nous répondrons dans les meilleurs délais (dans un délai maximum d'un semaine).</p>
+        </div>
 
+        <!-- Section 7 : Protection des enfants -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-child"></i> Protection des enfants</h2>
+            <p>Notre application s'adresse à un public général et ne collecte sciemment aucune information personnelle d'enfants de moins de 13 ans. Si vous êtes parent ou tuteur et pensez que votre enfant nous a fourni des données personnelles, veuillez nous contacter immédiatement. Aucune donnée n'étant collectée, ce risque est inexistant.</p>
+            <p>L'ensemble du contenu de l'application « Baye Niass, le fracassant » est approprié pour tous les âges.</p>
+        </div>
+
+        <!-- Section 8 : Transferts internationaux -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-globe"></i> Transferts internationaux</h2>
+            <p>Comme nous ne collectons aucune donnée personnelle, aucun transfert international de données n'a lieu. Les images utilisées dans l'application sont hébergées sur des services de stockage d'images situés dans l'Union Européenne, mais cela ne concerne que des fichiers publics non associés à des données personnelles.</p>
+        </div>
+
+        <!-- Section 9 : Cookies et technologies similaires -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-cookie-bite"></i> Cookies</h2>
+            <p>Cette application n'utilise <strong>aucun cookie de suivi</strong>. Les seules données stockées localement (localStorage) servent uniquement à des fins fonctionnelles (progression et thème). Aucun cookie tiers n'est déposé.</p>
+            <p>Vous pouvez à tout moment vider le stockage local de l'application via les paramètres de votre navigateur ou d'Android sans affecter le fonctionnement de base.</p>
+        </div>
+
+        <!-- Section 10 : Modifications de la politique -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-edit"></i> Modifications de cette politique</h2>
+            <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité pour refléter les évolutions de l'application ou des exigences légales. Toute modification sera publiée dans l'application et, si elle est substantielle, nous vous en informerons via une notification dans l'application </p>
+            <p>La date de la dernière mise à jour est indiquée en haut de cette page. Nous vous encourageons à consulter régulièrement cette politique.</p>
+        </div>
+
+        <!-- Section 11 : Contact -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <p>Si vous avez des questions concernant cette politique de confidentialité, le traitement de vos données ou si vous souhaitez exercer vos droits, vous pouvez nous contacter :</p>
             <div class="contact-info">
-                <h2><i class="fas fa-envelope"></i> Contact</h2>
-                 
-                <a href="mailto:ahmedkhalifaniasse00@gmail.com" class="email-link">
-                    <i class="fas fa-paper-plane"></i> ahmedkhalifaniasse00@gmail.com
-                </a>
+                <p><i class="fas fa-user"></i> <strong>Responsable du traitement :</strong> Ahmed Khalifa Niass</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email :</strong> <a href="mailto:ahmedkhalifaniasse00@gmail.com">ahmedkhalifaniasse00@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Dakar, Sénégal</p>
+                <p><i class="fas fa-clock"></i> Délai de réponse : 72 heures ouvrées</p>
             </div>
         </div>
 
-        <div class="footer">
-            <div class="logo">Ahmed Khalifa NIASS</div>
-            <p>Application de lecture © 2025 - Tous droits réservés</p>
-            <p style="opacity: 0.8; margin-top: 10px; font-size: 0.9rem;">
-                <i class="fas fa-lock"></i> Votre confidentialité est protégée
-            </p>
-         
+        <!-- Section 12 : Réclamation auprès de la CNIL -->
+       
+
+        <!-- Pied de page -->
+        <div class="privacy-footer">
+            <p>© 2026 Baye Niass, le fracassant – Tous droits réservés.</p>
+            <p>Conformité RGPD & Play Store Families Policy</p>
         </div>
     </div>
 
+    <!-- Barre d'actions flottante -->
+    
+
     <script>
-        // Animation au défilement
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            // Effet de parallaxe sur le header
-            window.addEventListener('scroll', function() {
-                const scrolled = window.pageYOffset;
-                const header = document.querySelector('.header');
-                if (header) {
-                    header.style.transform = `translateY(${scrolled * 0.1}px)`;
-                }
-            });
-
-            // Confirmation d'envoi d'email
-            const emailLink = document.querySelector('.email-link');
-            if (emailLink) {
-                emailLink.addEventListener('click', function(e) {
-                    if (!confirm('Vous allez ouvrir votre application de messagerie. Souhaitez-vous continuer ?')) {
-                        e.preventDefault();
-                    }
-                });
+        // Gestion du thème (clair/sombre)
+        const themeBtn = document.getElementById('themeBtn');
+        const body = document.body;
+        
+        // Vérifier si un thème est sauvegardé
+        const savedTheme = localStorage.getItem('privacy_theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            body.classList.remove('dark-mode');
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+        
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            if (isDark) {
+                localStorage.setItem('privacy_theme', 'dark');
+                themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('privacy_theme', 'light');
+                themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
             }
         });
+        
+        // Bouton retour (peut être utilisé pour fermer la WebView ou revenir en arrière)
+        const backBtn = document.getElementById('backBtn');
+        backBtn.addEventListener('click', () => {
+            // Si l'utilisateur est dans une WebView intégrée à l'application, on peut essayer de fermer
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // Pour une navigation simple, on affiche un message ou on ferme
+                window.close ? window.close() : alert('Utilisez le bouton retour de votre appareil pour revenir à l\'application.');
+            }
+        });
+        
+        // Bouton imprimer / générer PDF
+        const printBtn = document.getElementById('printBtn');
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+        
+        // Ajout d'un effet de scroll fluide pour les ancres (si besoin)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Animation d'entrée douce
+        window.addEventListener('load', () => {
+            document.querySelector('.privacy-container').style.opacity = '1';
+        });
+        
+        // Option : Afficher la date de dernière mise à jour dynamiquement (optionnel)
+        const dateSpan = document.querySelector('.last-updated');
+        if (dateSpan) {
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+            // On conserve la date fixe du 18 avril 2026, sinon décommenter ci-dessous :
+            // dateSpan.innerHTML = `<i class="fas fa-calendar-alt"></i> Dernière mise à jour : ${formattedDate}`;
+        }
     </script>
 </body>
 </html>
